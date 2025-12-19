@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stayza - Smart Rentals</title>
+
+    <!-- ✅ Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Animate.css for animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .glow:hover {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 text-white font-sans min-h-screen flex flex-col"
+  >
+    <!-- Navbar -->
+    <nav
+      class="flex justify-between items-center p-5 md:px-16 animate__animated animate__fadeInDown"
+    >
+      <div class="flex items-center space-x-2">
+        <img
+          src="https://img.icons8.com/color/48/000000/home--v2.png"
+          class="w-8 h-8 float"
+        />
+        <span class="text-2xl md:text-3xl font-bold">Stayza</span>
+      </div>
+      <a href="auth.html">
+        <button
+          class="bg-white text-blue-700 px-5 py-2 rounded-full font-semibold hover:bg-gray-200 glow"
+        >
+          Login
+        </button>
+      </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="flex-1 flex flex-col items-center justify-center text-center px-6 py-10 md:py-20 animate__animated animate__fadeInUp"
+    >
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight animate__animated animate__fadeInDown"
+      >
+        Find your next home,<br />
+        <span class="text-yellow-300 animate__pulse animate__infinite">
+          the smart way
+        </span>
+      </h1>
+      <p
+        class="text-white/90 max-w-md md:max-w-2xl mb-8 text-base md:text-lg animate__animated animate__fadeIn animate__delay-1s"
+      >
+        Stayza helps you discover verified rental homes with AI-powered
+        recommendations and fair rent analysis — no brokers, no fake listings.
+      </p>
+      <a href="auth.html">
+        <button
+          class="bg-white text-blue-700 font-semibold px-6 py-3 md:px-8 md:py-4 rounded-full shadow-md glow"
+        >
+          Get Started Free
+        </button>
+      </a>
+    </section>
+
+    <!-- Why Stayza Section -->
+    <section
+      id="features"
+      class="bg-white text-gray-900 py-16 md:py-20 px-6 md:px-16 rounded-t-3xl animate__animated animate__fadeInUp"
+    >
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Why Choose Stayza?
+      </h2>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center"
+      >
+        <div
+          class="bg-blue-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 animate__animated animate__zoomIn"
+        >
+          <img
+            src="https://img.icons8.com/fluency/96/artificial-intelligence.png"
+            class="mx-auto mb-4 float"
+          />
+          <h3 class="text-xl font-bold mb-2">AI Recommendations</h3>
+          <p class="text-gray-600">
+            Get personalized rental suggestions based on your needs, budget, and
+            lifestyle.
+          </p>
+        </div>
+
+        <div
+          class="bg-blue-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 animate__animated animate__zoomIn animate__delay-1s"
+        >
+          <img
+            src="https://img.icons8.com/color/96/verified-badge.png"
+            class="mx-auto mb-4 float"
+          />
+          <h3 class="text-xl font-bold mb-2">Verified Listings</h3>
+          <p class="text-gray-600">
+            Every home is checked and verified to ensure safety and reliability.
+          </p>
+        </div>
+
+        <div
+          class="bg-blue-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 animate__animated animate__zoomIn animate__delay-2s"
+        >
+          <img
+            src="https://img.icons8.com/color/96/price-tag.png"
+            class="mx-auto mb-4 float"
+          />
+          <h3 class="text-xl font-bold mb-2">Fair Rent Analysis</h3>
+          <p class="text-gray-600">
+            Stayza AI compares rent prices to ensure you’re paying what’s fair
+            for your city.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="text-center py-16 md:py-20 px-6 animate__animated animate__fadeInUp animate__delay-3s"
+    >
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Ready to find your dream home?
+      </h2>
+      <p class="text-white/80 mb-6 text-base md:text-lg">
+        Join thousands of renters discovering verified homes with Stayza.
+      </p>
+      <a href="auth.html">
+        <button
+          class="bg-yellow-400 text-black font-bold px-6 py-3 md:px-8 md:py-4 rounded-full shadow glow"
+        >
+          Start Now
+        </button>
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="text-center text-white/70 text-sm py-6 animate__animated animate__fadeInUp animate__delay-4s"
+    >
+      © 2025 Stayza — Made with ❤️ for a better rental experience.
+    </footer>
+  </body>
+</html>
